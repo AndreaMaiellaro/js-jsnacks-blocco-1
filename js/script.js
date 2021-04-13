@@ -52,32 +52,33 @@ var zucchine = [
     },
 ];
 
+var peso = 0;
+
 for ( var i = 0; i < zucchine.length; i++ ) {
     var thisZucchina = zucchine[i];
-    console.log(thisZucchina.peso);
-
-    var peso = 0;
-    console.log(peso);
+    console.log('peso della zucchina', thisZucchina.peso);
 
     peso = peso + thisZucchina.peso;
-
-    console.log(peso);
 }
+
+console.log(peso);
 
 
 //es 2
 
-// for ( var i = 0; i < zucchine.length; i++ ) {
+var minoreQuindici = 0;
+var maggioreQuindici = 0;
 
-//     if ( zucchine.peso < 15 ) {
-//         var minoreQuindici;
-//         minoreQuindici = minoreQuindici + zucchine.peso[i];
+for ( var i = 0; i < zucchine.length; i++ ) {
+    var thisZucchina = zucchine[i];
 
-//     } else {
-//         var maggioreQuindici;
-//         maggioreQuindici = maggioreQuindici + zucchine.peso[i];
-//     }
-    
-//     console.log(minoreQuindici);
-//     console.log(maggioreQuindici);
-//}
+    if ( thisZucchina.peso < 15 ) {
+        minoreQuindici = minoreQuindici + thisZucchina.peso;
+
+    } else {
+        maggioreQuindici = maggioreQuindici + thisZucchina.peso;
+    }
+}
+
+console.log('Quelle che pesano meno di 15 pesano in totale:', minoreQuindici);
+console.log('Quelle che pesano di piu di 15 pesano in totale:', maggioreQuindici);
