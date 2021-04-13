@@ -61,10 +61,13 @@ for ( var i = 0; i < zucchine.length; i++ ) {
     peso = peso + thisZucchina.peso;
 }
 
-console.log(peso);
+console.log('peso totale', peso);
 
 
 //es 2
+
+var menoQuindici = [];
+var piuQuindici = [];
 
 var minoreQuindici = 0;
 var maggioreQuindici = 0;
@@ -74,11 +77,17 @@ for ( var i = 0; i < zucchine.length; i++ ) {
 
     if ( thisZucchina.peso < 15 ) {
         minoreQuindici = minoreQuindici + thisZucchina.peso;
+        menoQuindici.push(thisZucchina);
 
     } else {
         maggioreQuindici = maggioreQuindici + thisZucchina.peso;
+        piuQuindici.push(thisZucchina);
+
     }
 }
+
+console.log(menoQuindici);
+console.log(piuQuindici);
 
 console.log('Quelle che pesano meno di 15 pesano in totale:', minoreQuindici);
 console.log('Quelle che pesano di piu di 15 pesano in totale:', maggioreQuindici);
